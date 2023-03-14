@@ -15,6 +15,8 @@ import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import MenuListItems from "../components/MenuListItems";
+import { blueGrey } from "@mui/material/colors";
 // import { Dashboard } from "@mui/icons-material";
 
 const drawerWidth = 200;
@@ -32,19 +34,7 @@ function Dashboard(props) {
     <div>
       <Toolbar />
       <Divider />
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    
+    <MenuListItems/>
     </div>
   );
 
@@ -97,6 +87,11 @@ function Dashboard(props) {
               width: drawerWidth,
             },
           }}
+          PaperProps={{
+            sx: {
+              backgroundColor: blueGrey[900],
+            },
+          }}
         >
           {drawer}
         </Drawer>
@@ -107,6 +102,11 @@ function Dashboard(props) {
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
+            },
+          }}
+          PaperProps={{
+            sx: {
+              backgroundColor: blueGrey[900],
             },
           }}
           open

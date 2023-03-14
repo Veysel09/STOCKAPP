@@ -10,6 +10,7 @@ import StoreIcon from "@mui/icons-material/Store";
 import StarsIcon from "@mui/icons-material/Stars";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
+import { useNavigate } from "react-router-dom";
 
 const icons = [
   {
@@ -48,18 +49,34 @@ const icons = [
     url: "https://14192.fullstack.clarusway.com/admin",
   },
 ];
+
+const iconStyle = {
+  color: "#eee",
+  "& .MuiSvgIcon-root": { color: "#936b6b" },
+  "&:hover": { color: "#785812" },
+  "&:hover .MuiSvgIcon-root": { color: "#785812" },
+};
+
 const MenuListItems = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <List>
-        {[].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
+        {icons?.map((item, index) => (
+          <ListItem key={index} disablePadding>
+            {item.url.includes("http") && (
+              <ListItemButton to={item.url} sx={iconStyle}>
+                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemText primary={item.title} />
+              </ListItemButton>
+            )}
+
+            {!item.url.includes("http") && (
+              <ListItemButton onClick={() => navigate(item.url)} sx={iconStyle}>
+                <ListItemIcon>{item.icon}</ListItemIcon>
+                <ListItemText primary={item.title} />
+              </ListItemButton>
+            )}
           </ListItem>
         ))}
       </List>
