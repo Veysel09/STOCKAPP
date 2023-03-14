@@ -14,8 +14,10 @@ const persistedReducer = persistReducer(persistConfig, authReducer);
 
 const store = configureStore({
   reducer: {
-    auth: authReducer,
+    auth: persistedReducer,
   },
   devTools: process.env.NODE_ENV !== "production",
 });
+
+export const persistor = persistStore(store);
 export default store;
