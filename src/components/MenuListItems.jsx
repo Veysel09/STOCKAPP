@@ -52,7 +52,7 @@ const icons = [
 
 const iconStyle = {
   color: "#eee",
-  "& .MuiSvgIcon-root": { color: "#936b6b" },
+  "& .MuiSvgIcon-root": { color: "#a36c6c" },
   "&:hover": { color: "#785812" },
   "&:hover .MuiSvgIcon-root": { color: "#785812" },
 };
