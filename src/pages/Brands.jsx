@@ -11,3 +11,6 @@ const Brands = () => {
   const { brands, loading } = useSelector((state) => state.stock);
   const [open, setOpen] = useState(false);
   const [info, setInfo] = useState({});
+useEffect(() => {
+    getBrands();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
