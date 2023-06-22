@@ -14,3 +14,9 @@ const Brands = () => {
 useEffect(() => {
     getBrands();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  return (
+    <Box>
+      <Typography variant="h4" color="error" mb={2}>
+        Brands
+      </Typography>
