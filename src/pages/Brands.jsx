@@ -36,3 +36,17 @@ useEffect(() => {
           There is no brand to show
         </Alert>
       )}
+ {brands?.length > 0 && (
+        <Grid container sx={flexCenter} mt={4}>
+          {brands?.map((brand) => (
+            <Grid item key={brand.id}>
+              <BrandCard brand={brand} setOpen={setOpen} setInfo={setInfo} />
+            </Grid>
+          ))}
+        </Grid>
+      )}
+    </Box>
+  );
+};
+
+export default Brands;
