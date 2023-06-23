@@ -27,3 +27,8 @@ useEffect(() => {
           setOpen(true);
         }}
       ></Button>
+  
+      </Button>
+
+      <BrandModal open={open} setOpen={setOpen} info={info} setInfo={setInfo} />
+      
