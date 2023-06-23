@@ -11,7 +11,8 @@ const Brands = () => {
   const { brands, loading } = useSelector((state) => state.stock);
   const [open, setOpen] = useState(false);
   const [info, setInfo] = useState({});
-useEffect(() => {
+
+  useEffect(() => {
     getBrands();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -20,23 +21,26 @@ useEffect(() => {
       <Typography variant="h4" color="error" mb={2}>
         Brands
       </Typography>
- <Button
+
+      <Button
         variant="contained"
         onClick={() => {
           setInfo({});
           setOpen(true);
         }}
-      ></Button>
-  
+      >
+        New Brand
       </Button>
 
       <BrandModal open={open} setOpen={setOpen} info={info} setInfo={setInfo} />
-       {!loading && !brands?.length && (
+
+      {!loading && !brands?.length && (
         <Alert severity="warning" sx={{ mt: 4, width: "50%" }}>
           There is no brand to show
         </Alert>
       )}
- {brands?.length > 0 && (
+
+      {brands?.length > 0 && (
         <Grid container sx={flexCenter} mt={4}>
           {brands?.map((brand) => (
             <Grid item key={brand.id}>
