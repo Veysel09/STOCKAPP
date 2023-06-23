@@ -31,4 +31,8 @@ useEffect(() => {
       </Button>
 
       <BrandModal open={open} setOpen={setOpen} info={info} setInfo={setInfo} />
-      
+       {!loading && !brands?.length && (
+        <Alert severity="warning" sx={{ mt: 4, width: "50%" }}>
+          There is no brand to show
+        </Alert>
+      )}
