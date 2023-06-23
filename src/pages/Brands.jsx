@@ -20,3 +20,10 @@ useEffect(() => {
       <Typography variant="h4" color="error" mb={2}>
         Brands
       </Typography>
+ <Button
+        variant="contained"
+        onClick={() => {
+          setInfo({});
+          setOpen(true);
+        }}
+      ></Button>
