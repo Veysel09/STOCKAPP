@@ -6,7 +6,12 @@ import KpiCards from "../components/KpiCards";
 import useStockCalls from "../hooks/useStockCalls";
 
 const Home = () => {
-  return <div>Home</div>;
+  const { getAllStockData } = useStockCalls();
+
+  // ! Uygulama ilk olarak acildiginda tum stock verilerini paralel olarak getirmeyi baslat
+  useEffect(() => {
+    getAllStockData();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 };
 
 export default Home;
