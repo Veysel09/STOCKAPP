@@ -13,5 +13,6 @@ const Home = () => {
     getAllStockData();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 };
+return <Box></Box>;
 
 export default Home;
