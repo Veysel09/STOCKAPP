@@ -13,6 +13,14 @@ const Home = () => {
     getAllStockData();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 };
-return <Box></Box>;
+return (
+  <Box>
+    <Typography variant="h4" color="error" mb={4}>
+      Dashboard
+    </Typography>
+    <KpiCards />
+    <Charts />
+  </Box>
+);
 
 export default Home;
