@@ -10,6 +10,8 @@ import ProductsTable from "../components/tables/ProductsTable";
 
 
 const Products = () => {
+   const { getProCatBrands } = useStockCalls();
+  const { products, brands } = useSelector((state) => state.stock);
   return <div>Products</div>;
 };
 
