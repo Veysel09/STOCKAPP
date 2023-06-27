@@ -18,7 +18,13 @@ const Products = () => {
   useEffect(() => {
     getProCatBrands();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
-  return <div>Products</div>;
+  return (
+    <Box>
+      <Typography variant="h4" color="error" mb={4}>
+        Products
+      </Typography>
+    </Box>
+  );
 };
 
 export default Products;
