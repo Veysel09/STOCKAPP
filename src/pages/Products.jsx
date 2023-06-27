@@ -26,6 +26,15 @@ const Products = () => {
       <Button variant="contained" onClick={() => setOpen(true)}>
         New Product
       </Button>
+      <MultiSelect
+        data1={brands}
+        data2={products}
+        key1="name"
+        key2="brand"
+        firstNames={selectedBrands}
+        setFirstNames={setSelectedBrands}
+        setSecondNames={setSelectedProducts}
+      />
     </Box>
   );
 };
