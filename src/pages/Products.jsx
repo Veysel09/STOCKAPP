@@ -23,6 +23,9 @@ const Products = () => {
       <Typography variant="h4" color="error" mb={4}>
         Products
       </Typography>
+      <Button variant="contained" onClick={() => setOpen(true)}>
+        New Product
+      </Button>
     </Box>
   );
 };
