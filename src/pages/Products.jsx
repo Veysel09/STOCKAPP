@@ -15,6 +15,9 @@ const Products = () => {
   const [info, setInfo] = useState({});
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [selectedProducts, setSelectedProducts] = useState([]);
+  useEffect(() => {
+    getProCatBrands();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   return <div>Products</div>;
 };
 
