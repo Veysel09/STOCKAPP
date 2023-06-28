@@ -41,6 +41,12 @@ const Products = () => {
         info={info}
         setInfo={setInfo}
       />
+      {products?.length > 0 && (
+        <ProductsTable
+          selectedProducts={selectedProducts}
+          selectedBrands={selectedBrands}
+        />
+      )}
     </Box>
   );
 };
