@@ -35,6 +35,12 @@ const Products = () => {
         setFirstNames={setSelectedBrands}
         setSecondNames={setSelectedProducts}
       />
+      <ProductModal
+        open={open}
+        setOpen={setOpen}
+        info={info}
+        setInfo={setInfo}
+      />
     </Box>
   );
 };
