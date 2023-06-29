@@ -11,6 +11,14 @@ const Purchases = () => {
   const { getAllStockData } = useStockCalls();
   const [selectedProducts, setSelectedProducts] = useState([]);
   const [selectedBrands, setSelectedBrands] = useState([]);
+
+  useEffect(() => {
+    // getPurchases();
+    // getFirms();
+    // getProCatBrands();
+    getAllStockData();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   return <div>Purchases</div>;
 };
 
