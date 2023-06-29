@@ -19,7 +19,16 @@ const Purchases = () => {
     getAllStockData();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  return <div>Purchases</div>;
+  return (
+    <>
+      <PurchaseModal
+        info={info}
+        setInfo={setInfo}
+        open={open}
+        setOpen={setOpen}
+      />
+    </>
+  );
 };
 
 export default Purchases;
