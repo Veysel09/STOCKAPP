@@ -9,6 +9,8 @@ const Purchases = () => {
   const { purchases } = useSelector((state) => state.stock);
   // const { getProCatBrands, getPurchases, getFirms } = useStockCalls();
   const { getAllStockData } = useStockCalls();
+  const [selectedProducts, setSelectedProducts] = useState([]);
+  const [selectedBrands, setSelectedBrands] = useState([]);
   return <div>Purchases</div>;
 };
 
