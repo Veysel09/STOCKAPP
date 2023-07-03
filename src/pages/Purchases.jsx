@@ -30,7 +30,15 @@ const Purchases = () => {
       <Typography variant="h4" color="error" mt={4} mb={4}>
         Purchases
       </Typography>
-      <Button>New Purchase</Button>
+      <Button
+        variant="contained"
+        onClick={() => {
+          setInfo({});
+          setOpen(true);
+        }}
+      >
+        New Purchase
+      </Button>
     </>
   );
 };
