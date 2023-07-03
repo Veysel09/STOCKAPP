@@ -39,6 +39,7 @@ const Purchases = () => {
       >
         New Purchase
       </Button>
+      {purchases?.lenght > 0 && <></>}
     </>
   );
 };
