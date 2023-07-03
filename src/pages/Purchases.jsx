@@ -27,6 +27,9 @@ const Purchases = () => {
         open={open}
         setOpen={setOpen}
       />
+      <Typography variant="h4" color="error" mt={4} mb={4}>
+        Purchases
+      </Typography>
     </>
   );
 };
